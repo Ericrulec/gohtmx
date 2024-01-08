@@ -10,8 +10,8 @@ run:
 	@templ generate
 	@go run cmd/main.go
 
-lint:
-	@templ fmt ./view/**/*.templ
+fmt:
+	@templ fmt .
 	@go fmt ./...
 
 docker-build:
