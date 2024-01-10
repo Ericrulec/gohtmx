@@ -10,11 +10,11 @@ type PostsHandler struct{}
 type ContentHandler struct{}
 
 func (h *IndexHandler) GetIndex(c echo.Context) error {
-	return pages.HomePage().Render(c.Request().Context(), c.Response())
+	return render(c, pages.HomePage())
 }
 func (h *PostsHandler) GetPosts(c echo.Context) error {
-	return pages.PostsPage().Render(c.Request().Context(), c.Response())
+	return render(c, pages.PostsPage())
 }
 func (h *ContentHandler) GetPasswordsPage(c echo.Context) error {
-	return pages.PasswordsPage().Render(c.Request().Context(), c.Response())
+	return render(c, pages.PasswordsPage())
 }
