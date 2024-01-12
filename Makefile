@@ -3,7 +3,7 @@ init:
 	@go install github.com/a-h/templ/cmd/templ@latest
 
 tailwind:
-	@./node_modules/.bin/tailwindcss -i ./assets/css/input.css -o ./assets/css/tw.css
+	@./node_modules/.bin/tailwindcss -i ./assets/css/input.css -o ./assets/css/tw.css --minify
 
 run:
 	@make tailwind
