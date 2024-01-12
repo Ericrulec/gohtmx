@@ -1,0 +1,9 @@
+[Unit]
+Description=Go web server
+
+[Service]
+WorkingDirectory=/usr/local
+ExecStart=/usr/local/bin -D FOREGROUND -k start 
+ExecReload=/usr/local/bin -k graceful 
+Type=notify
+Restart=always

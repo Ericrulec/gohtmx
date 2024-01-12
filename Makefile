@@ -5,9 +5,12 @@ init:
 tailwind:
 	@./node_modules/.bin/tailwindcss -i ./assets/css/input.css -o ./assets/css/tw.css --minify
 
-run:
+build:
 	@make tailwind
-	@templ generate
+	@~/go/bin/templ generate
+	@go build cmd/main.go
+
+run:
 	@go run cmd/main.go
 
 fmt:

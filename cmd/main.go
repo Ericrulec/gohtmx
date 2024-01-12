@@ -9,7 +9,7 @@ import (
 
 func main() {
 	e := echo.New()
-	//e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("ejen.no")
+	//e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("domains")
 	e.AutoTLSManager.Cache = autocert.DirCache("/var/www/.cache")
 	e.Use(middleware.Recover())
 	e.Use(middleware.LoggerWithConfig(middleware.DefaultLoggerConfig))
@@ -26,6 +26,6 @@ func main() {
 
 	e.GET("/posts/passwords", contentHandler.GetPasswordsPage)
 
-	//e.Logger.Fatal(e.StartAutoTLS(":3000"))
+	//e.Logger.Fatal(e.StartAutoTLS(":443"))
 	e.Logger.Fatal(e.Start(":3000"))
 }
