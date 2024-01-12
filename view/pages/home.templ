@@ -1,7 +1,6 @@
 package pages
 
 import "github.com/Ericrulec/gohtmx/view/layout"
-import "github.com/Ericrulec/gohtmx/view/components"
 
 templ HomePage() {
 	@layout.Base("Homepage") {
@@ -20,14 +19,14 @@ templ HomePage() {
 					>
 						Erik Jensson
 					</h1>
-					@components.Paragraph() {
+					<p class="leading-relaxed text-red-50 mb-8 text-lg">
 						Hi, and welcome to my personal website! This is a site where I
 						talk about new, old and current techonology that intrigues me. I
 						love fiddling with my Linux machine, doing countless meaningless
 						customizations, just so that I can save a couple seconds doing
 						basic neanderthal tasks. If this strikes you as interesting, then
 						stick around.
-					}
+					</p>
 					<div class="flex justify-center">
 						<button
 							class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg"
