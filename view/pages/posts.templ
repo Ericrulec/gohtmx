@@ -19,7 +19,7 @@ var PostList = []Post{{
 }}
 
 templ PostsPage() {
-	@layout.Base("Posts") {
+	@layout.Base("Posts", false) {
 		<section class="text-gray-400 body-font overflow-hidden">
 			<div class="container px-5 py-24 mx-auto">
 				for _,post := range PostList {
